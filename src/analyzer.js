@@ -31,7 +31,6 @@ module.exports = {
         }), "organizations_primary_license");
 
         async.map(parser.getProjects(), function (project, callback) {
-
             Gendr.guess(project.student.display_name, function(err, gender) {
                 var fixedGender = function () {
                     if(gender != null) {

@@ -1,5 +1,6 @@
 var Parser = require("./src/parser");
 var fs = require('fs');
+var analyzer = require("./src/analyzer");
 
 var parser = new Parser();
 var currentPath = "./data/2016";
@@ -14,3 +15,5 @@ for (var i in files) {
 
 console.log("Organizations : " + parser.getOrganizations().length);
 console.log("Projects      : " + parser.getProjects().length);
+
+analyzer.analyse(parser);
