@@ -1,0 +1,16 @@
+{
+  "name": "gsoc-stats",
+  "version": "1.0.0",
+  "description": "Generate useful stats about the selected Google summer of code projects",
+  "main": "index.js",
+  "scripts": {
+    "generate": "node --use_strict index.js"
+  },
+  "author": "Niranjan Rajendran <niranjan94@yahoo.com>",
+  "license": "MIT",
+  "dependencies": {
+    "async": "^2.0.0-rc.3",
+    "gendr": "latest",
+    "underscore": "latest"
+  }
+}
