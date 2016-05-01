@@ -13,7 +13,9 @@ for (var i in files) {
     }
 }
 
+console.log("Basic Statistics:");
+console.log("=================");
 console.log("Organizations : " + parser.getOrganizations().length);
 console.log("Projects      : " + parser.getProjects().length);
-
+console.log("\nStarting analysis");
 analyzer.analyse(parser);

@@ -21,15 +21,19 @@ module.exports = {
         save(_.countBy(parser.getProjects(), function (project) {
             return project.organization.name;
         }), "projects_per_organization");
+        console.log("Projects per organization. Done.");
 
         save(_.countBy(parser.getOrganizations(), function (organization) {
             return organization.category;
         }), "organizations_category");
+        console.log("Organizations per category. Done.");
 
         save(_.countBy(parser.getOrganizations(), function (organization) {
             return organization.primary_open_source_license;
         }), "organizations_primary_license");
+        console.log("Organizations per license type. Done.");
 
+        console.log("Guessing students' gender. Start.");
         async.map(parser.getProjects(), function (project, callback) {
             Gendr.guess(project.student.display_name, function(err, gender) {
                 var fixedGender = function () {
@@ -51,6 +55,9 @@ module.exports = {
             save(_.countBy(results, function (result) {
                 return result;
             }), "students_gender_distribution");
+            console.log("Guessing students' gender. Done.");
         });
+
+        console.log("Analysis complete. Results saved in ./out/*");
     }
 };
