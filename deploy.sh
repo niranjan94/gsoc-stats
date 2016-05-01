@@ -14,8 +14,9 @@ git config --global user.email user.name "Niranjan Rajendran"
 git config --global user.name user.email "niranjan94@yahoo.com"
 
 git clone "https://$GH_TOKEN@github.com/niranjan94/gsoc-stats.git" gh-pages
-yes | cp -rf  out/* gh-pages/out/
 cd gh-pages
+git checkout gh-pages
+yes | cp -rf  ../out/* out/
 git add .
 git commit -m "[${rev}] Update generated statistics"
 git push origin gh-pages
