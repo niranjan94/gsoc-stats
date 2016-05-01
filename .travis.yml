@@ -3,4 +3,6 @@ node_js:
   - "4.4.3"
 script:
   - npm run generate
+after_success:
+  - test $TRAVIS_PULL_REQUEST == "false" && test $TRAVIS_BRANCH == "master" && bash deploy.sh
 
