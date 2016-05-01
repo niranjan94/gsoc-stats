@@ -56,8 +56,8 @@ module.exports = {
                 return result;
             }), "students_gender_distribution");
             console.log("Guessing students' gender. Done.");
+            console.log("Analysis complete. Results saved in ./out/*");
         });
 
-        console.log("Analysis complete. Results saved in ./out/*");
     }
 };
