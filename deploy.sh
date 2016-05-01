@@ -10,8 +10,8 @@ fi
 
 rev=$(git rev-parse --short HEAD)
 
-git config --global user.email "Niranjan Rajendran"
-git config --global user.name "niranjan94@yahoo.com"
+git config --global user.name "Niranjan Rajendran"
+git config --global user.email "niranjan94@yahoo.com"
 
 git clone "https://$GH_TOKEN@github.com/niranjan94/gsoc-stats.git" gh-pages
 cd gh-pages
