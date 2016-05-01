@@ -19,4 +19,4 @@ git checkout gh-pages
 yes | cp -rf  ../out/* out/
 git add .
 git commit -m "[${rev}] Update generated statistics"
-git push origin gh-pages
+git push -q origin gh-pages

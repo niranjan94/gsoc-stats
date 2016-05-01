@@ -46,7 +46,6 @@ module.exports = {
                     }
                 } ();
                 callback(err, fixedGender);
-                console.log(fixedGender);
             });
         }, function(err, results){
             save(_.countBy(results, function (result) {
